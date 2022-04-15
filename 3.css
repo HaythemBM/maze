@@ -1,0 +1,62 @@
+#texte{
+    background-color: transparent;
+    color: rgb(151, 107, 11);
+    width: 90%;
+    text-align: center;
+    line-height: 50px;
+   text-transform: capitalize;
+   margin: 100px 50px;
+   font-family: fantasy;
+   padding: auto;
+   font-size: 700%;
+   
+}
+#texte1{
+    background-color: transparent;
+    color: rgb(151, 107, 11);
+    width: 90%;
+    text-align: center;
+    line-height: 50px;
+   text-transform: capitalize;
+   margin: -50px 50px;
+   font-size: 500%;
+}
+#btn1{
+    margin-top: 300px;
+    display: flex;
+    margin-left: 600px;
+    position: relative;
+    padding: 20px 30px;
+}
+button{
+    margin-left: 100px;
+    border: 0;
+    background: transparent;
+    color: white;
+    position: absolute;
+    overflow: hidden;
+    padding: 20px 100px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0px -0px 0px 0px rgba(143,64,248,.5), 0px 0px 0px 0px rgba(39,200,255,.5);
+    transition: all .2s;
+}
+button::after{
+    content: "";
+    width: 500px;
+    height: 400px;
+    background: linear-gradient(225deg,#aaa844 0%, rgb(185, 133, 37) 50%, #c625d0 100%);
+position: absolute;
+top: -50px;
+left: -100px;
+z-index: -1;
+transition: all .2s;
+}
+button:hover::after{
+    transform: rotate(150deg);
+}
+button:hover{
+    transform: translate(0,-6px);
+    box-shadow: 10px -10px 25px 0 rgba(143,64,248,.25), -10px 10px 25px 0px rgba(39,200,255,.25);
+}
