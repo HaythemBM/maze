@@ -39,30 +39,27 @@ move = function (timeDelta) {
     player.y = position.y;
     console.log(`this is x: ${position.x}`);
     console.log(position.y);
-
-    const result_box = document.querySelector(".result_box");
-    const resume = result_box.querySelector(".buttons .quit");
-     
-
-     resume.onclick = ()=>{
-         var clicked;
-        document.getElementById("popup").style.display = "none"; 
-        clicked =true;
-    
-        
- } 
-    if(player.x>17.96 && player.x<17.966  ){ 
+    if(player.x>17.4 && player.x<18 && clicked===false  ){ 
         document.getElementById("popup").style.display = "block";
         
 
   
     }
-   /*  if(player.x>18.7 && player.x<20 && player.y<14  && clicked == false ){
+     if(player.x>18.7 && player.x<20 && player.y<14  && clicked2 === false ){
       document.getElementById("popup2").style.display = "block";
       console.log('popup2');
 
-     } */
-    
+     }
+     /* if(player.x>21.8 && player.x<22.7 && player.y>12.4  && clicked3 === false ){
+        document.getElementById("popup3").style.display = "block";
+        console.log('popup3');
+  
+       }*/
+       if(player.x>25.5 &&  player.y>9.8){
+        document.getElementById("popupglob").style.display = "block";
+        console.log('popupgl');
+        
+       } 
 }
 
 //----------------------------------------------------------
@@ -149,16 +146,7 @@ checkCollision = function (fromX, fromY, toX, toY, radius) {
                 toY = position.y = blockY + 1 - radius;
         }
     }
-   /*  if(player.x>17){
-        window.addEventListener("load", function(){
-            //setTimeout(
-               // function open(event){
-                    document.querySelector(".popup").style.display = "block";
-               // },
-               // 6000
-            //)
-        });
-    } */
+ 
 
     return position;
 }
