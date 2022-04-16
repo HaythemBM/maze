@@ -93,15 +93,15 @@ updateMap = function () {
     /* var miniMap = $("minimap"); */
     var objects = $("objects");
 
-    var objectCtx = objects.getContext("2d");
+    /* var objectCtx = objects.getContext("2d"); */
     /* objectCtx.clearRect(0, 0, miniMap.width, miniMap.height); */
 
-    objectCtx.fillStyle = "black";
+    /* objectCtx.fillStyle = "black";
     objectCtx.fillRect(
         player.x * mapScale - 2,
         player.y * mapScale - 2,
         4, 4
-    );
+    ); */
 
     // enemy drawing
     /* for (var i = 0; i < enemies.length; i++) {

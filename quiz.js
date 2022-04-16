@@ -46,7 +46,7 @@ const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
 // if Next Que button clicked
-next_btn.onclick = ()=>{
+next_btn.addEventListener('click',  ()  =>  {
     if(que_count < questions.length - 1){ //if question count is less than total question length
         que_count++; //increment the que_count value
         que_numb++; //increment the que_numb value
@@ -63,7 +63,7 @@ next_btn.onclick = ()=>{
         clearInterval(counterLine); //clear counterLine
         showResult(); //calling showResult function
     }
-}
+})
 
 // getting questions and options from array
 function showQuetions(index){
@@ -82,7 +82,7 @@ function showQuetions(index){
 
     // set onclick attribute to all available options
     for(i=0; i < option.length; i++){
-        option[i].setAttribute("onclick", "optionSelected(this)");
+        option[i].setAttribute("onclick", "optionSelected2(this)");
     }
 }
 // creating the new div tags which for icons
@@ -90,7 +90,7 @@ let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 //if user clicked on option
-function optionSelected(answer){
+function optionSelected2(answer){
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
     let userAns = answer.textContent; //getting user selected option
@@ -133,7 +133,7 @@ function showResult(){
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
     else if(userScore > 1){ // if user scored more than 1
-        let scoreTag = '<span>and nice , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p><br>Now turn to the right</br></span>';
+        let scoreTag = '<span>and nice , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p><br>Now turn to the left</br></span>';
         scoreText.innerHTML = scoreTag;
     }
     else{ // if user scored less than 1

@@ -11,15 +11,16 @@ const timeCount2 = document.querySelector(".timer2 .timer_sec2");
 
 // if continueQuiz button clicked
 start_btn2.onclick = ()=>{
+   
    // info_box.classList.remove("activeInfo"); //hide info box
     quiz_box2.classList.add("activeQuiz2"); //show quiz box
     showQuetions2(0); //calling showQestions function
     queCounter2(1); //passing 1 parameter to queCounter
-    startTimer2(15); //calling startTimer function
-    startTimerLine2(0); //calling startTimerLine function
+    startTimer2(10); //calling startTimer function
+     startTimerLine2(0);  //calling startTimerLine function
 }
 
-let timeValue2 =  5;
+let timeValue2 =  10;
 let que_count2 = 0;
 let que_numb2 = 1;
 let userScore2 = 0;
@@ -45,7 +46,7 @@ const next_btn2 = document.querySelector("footer .next_btn2");
 const bottom_ques_counter2 = document.querySelector("footer .total_que2");
 
 // if Next Que button clicked
-next_btn2.onclick = ()=>{
+next_btn2.addEventListener('click',  ()  =>  {
     if(que_count2 < questions2.length - 1){ //if question count is less than total question length
         que_count2++; //increment the que_count value
         que_numb2++; //increment the que_numb value
@@ -62,7 +63,7 @@ next_btn2.onclick = ()=>{
         clearInterval(counterLine2); //clear counterLine
         showResult2(); //calling showResult function
     }
-}
+})
 
 // getting questions and options from array
 function showQuetions2(index){
@@ -89,23 +90,23 @@ let tickIconTag2 = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag2 = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 //if user clicked on option
-function optionSelected2(answer){
+function optionSelected(answer2){
     clearInterval(counter2); //clear counter
     clearInterval(counterLine2); //clear counterLine
-    let userAns2 = answer.textContent; //getting user selected option
+    let userAns2 = answer2.textContent; //getting user selected option
     let correcAns2 = questions2[que_count2].answer2; //getting correct answer from array
     const allOptions2 = option_list2.children.length;
     
     
     if(userAns2 == correcAns2){ //if user selected option is equal to array's correct answer
         userScore2 += 1; //upgrading score value with 1
-        answer.classList.add("correct"); //adding green color to correct selected option
-        answer.insertAdjacentHTML("beforeend", tickIconTag2); //adding tick icon to correct selected option
+        answer2.classList.add("correct"); //adding green color to correct selected option
+        answer2.insertAdjacentHTML("beforeend", tickIconTag2); //adding tick icon to correct selected option
         console.log("Correct Answer");
         console.log("Your correct answers = " + userScore2);
     }else{
-        answer.classList.add("incorrect"); //adding red color to correct selected option
-        answer.insertAdjacentHTML("beforeend", crossIconTag2); //adding cross icon to correct selected option
+        answer2.classList.add("incorrect"); //adding red color to correct selected option
+        answer2.insertAdjacentHTML("beforeend", crossIconTag2); //adding cross icon to correct selected option
         console.log("Wrong Answer");
 
         for(i=0; i < allOptions2; i++){
@@ -147,7 +148,7 @@ function startTimer2(time){
     function timer2(){
         timeCount2.textContent = time; //changing the value of timeCount with time value
         time--; //decrement the time value
-        if(time <= 5){ //if timer is less than 9
+        if(time < 9){ //if timer is less than 9
             let addZero2 = timeCount2.textContent; 
             timeCount2.textContent = "0" + addZero2; //add a 0 before time value
         }
@@ -171,16 +172,16 @@ function startTimer2(time){
     }
 }
 
-function startTimerLine2(time){
-    counterLine2 = setInterval(timer2, 8);
+ function startTimerLine2(time){
+    counterLine2 = setInterval(timer2, 10);
     function timer2(){
         time += 1; //upgrading time value with 1
         time_line2.style.width = time + "px"; //increasing width of time_line with px by time value
-        if(time > 15){ //if time value is greater than 549
+        if(time > 8){ //if time value is greater than 549
             clearInterval(counterLine2); //clear counterLine
         }
     }
-}
+} 
 
 function queCounter2(index){
     //creating a new span tag and passing the question number and total question

@@ -189,7 +189,7 @@ body{
     pointer-events: none;
 }
 
-section .option_list .option .icon{
+section .option_list .option.icon{
     height: 27px;
     width: 27px;
     border: 2px solid transparent;
@@ -200,13 +200,13 @@ section .option_list .option .icon{
     transition: all 0.3s ease;
     line-height: 24px;
 }
-.option_list .option .icon.tick{
+.option_list .option.icon.tick{
     color: #23903c;
     border-color: #23903c;
     background: #d4edda;
 }
 
-.option_list .option .icon.cross{
+.option_list .option.icon.cross{
     color: #a42834;
     background: #f8d7da;
     border-color: #a42834;

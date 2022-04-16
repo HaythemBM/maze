@@ -39,12 +39,12 @@ move = function (timeDelta) {
     player.y = position.y;
     console.log(`this is x: ${position.x}`);
     console.log(position.y);
-    if(player.x>17.4 && player.x<18 && clicked===false  ){ 
+      if(player.x>17.4 && player.x<18 && clicked===false  ){ 
         document.getElementById("popup").style.display = "block";
         
 
   
-    }
+    } 
      if(player.x>18.7 && player.x<20 && player.y<14  && clicked2 === false ){
       document.getElementById("popup2").style.display = "block";
       console.log('popup2');
