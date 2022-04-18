@@ -4,29 +4,30 @@
 <!-- <script src="src/main.js" type="text/javascript"></script> -->
 <script src="src/enemies.js" type="text/javascript"></script>
 
- <script src="src/player.js" type="text/javascript"></script>
+<script src="src/player.js" type="text/javascript"></script>
 <script src="src/renderer.js" type="text/javascript"></script>
 <script src="src/map.js" type="text/javascript"></script>
 <script src="src/init.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="src/style.css"/>
+<link rel="stylesheet" type="text/css" href="src/style.css" />
 <link rel="stylesheet" href="quiz.css">
 <link rel="stylesheet" href="quiz2.css">
 <link rel="stylesheet" href="quiz3.css">
 <link rel="stylesheet" href="end.css">
-<link rel="icon" type="image/png" href="src/assets/bush.png"/>
+<link rel="icon" type="image/png" href="src/assets/bush.png" />
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 <head>
     <title>Labyrinth</title>
 </head>
 
 <body>
-    <div id ="container">
+    <div id="container">
         <div id="screen">
-           
-            <div id="floor">
-               
 
-               <!--  <model-viewer bounds="tight" enable-pan src="Adventurer.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1.8" autoplay animation-name="CharacterArmature|Walk" camera-orbit="130.9deg 64.34deg auto" min-camera-orbit="31deg 50deg auto" max-camera-orbit="180deg 76deg auto">
+            <div id="floor">
+
+
+                <!--  <model-viewer bounds="tight" enable-pan src="Adventurer.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1.8" autoplay animation-name="CharacterArmature|Walk" camera-orbit="130.9deg 64.34deg auto" min-camera-orbit="31deg 50deg auto" max-camera-orbit="180deg 76deg auto">
 
                     <div class="progress-bar hide" slot="progress-bar">
                         <div class="update-bar"></div>
@@ -38,12 +39,16 @@
                         <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
                     </div>
                 </model-viewer> -->
-                <model-viewer bounds="tight" enable-pan src="Adventurer.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1.8" autoplay animation-name="CharacterArmature|Walk" camera-orbit="130.9deg 64.34deg auto" min-camera-orbit="-180deg 72deg auto" max-camera-orbit="-180deg 72deg auto" camera-target="0.08m 0.911m 0.1118m">
+                <model-viewer bounds="tight" enable-pan src="Adventurer.glb" ar ar-modes="webxr scene-viewer quick-look"
+                    camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1.8" autoplay
+                    animation-name="CharacterArmature|Walk" camera-orbit="130.9deg 64.34deg auto"
+                    min-camera-orbit="-180deg 72deg auto" max-camera-orbit="-180deg 72deg auto"
+                    camera-target="0.08m 0.911m 0.1118m">
 
                 </model-viewer>
-                
-             </div>
-            
+
+            </div>
+
             <div id="ceiling"></div>
             <div id="map">
                 <canvas id="minimap"></canvas>
@@ -51,195 +56,195 @@
             </div>
         </div>
     </div>
-    
-    <div id="popup" class="popup" >
-         
+
+    <div id="popup" class="popup">
+
         <div class="start_btn"><button>Start Quiz</button></div>
         <div class="quiz_box">
-          
-           
-           <header>
-               <div class="timer">
-                   <div class="time_left_txt">Time Left</div>
-                   <div class="timer_sec">15</div>
-               </div>
-               <div class="time_line"></div>
-           
-               <div class="que_text">
-                  
-               </div>
-               <div class="option_list">
-                   
-               </div>
-           </header> 
-    
-           <!-- footer of Quiz Box -->
-           <footer>
-               <div class="total_que">
-                   <!-- Here I've inserted Question Count Number from JavaScript -->
-               </div>
-               <button class="next_btn">Next </button>
-           </footer>
-               
-           
-           </div>
-    
-          <!-- Result Box -->
-         <div class="result_box">
-           <div class="icon">
-               <i class="fas fa-crown"></i>
-           </div>
-           <div class="complete_text">You've completed the Quiz!</div>
-           <div class="score_text">
-               <!-- Here I've inserted Score Result from JavaScript -->
-           </div>
-           <div class="buttons">
-              <!--  <butto.popup n class="restart">Replay Quiz</button> -->
-               <button class="quit">Resume </button>
-    
-           </div>
-         </div>  
-              
 
 
-            
+            <header>
+                <div class="timer">
+                    <div class="time_left_txt">Time Left</div>
+                    <div class="timer_sec">15</div>
+                </div>
+                <div class="time_line"></div>
+
+                <div class="que_text">
+
+                </div>
+                <div class="option_list">
+
+                </div>
+            </header>
+
+            <!-- footer of Quiz Box -->
+            <footer>
+                <div class="total_que">
+                    <!-- Here I've inserted Question Count Number from JavaScript -->
+                </div>
+                <button class="next_btn">Next </button>
+            </footer>
+
+
+        </div>
+
+        <!-- Result Box -->
+        <div class="result_box">
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="complete_text">You've completed the Quiz!</div>
+            <div class="score_text">
+                <!-- Here I've inserted Score Result from JavaScript -->
+            </div>
+            <div class="buttons">
+                <!--  <butto.popup n class="restart">Replay Quiz</button> -->
+                <button class="quit">Resume </button>
+
+            </div>
+        </div>
+
+
+
+
     </div>
-    <div id="popup2" class="popup2" >
-         
+    <div id="popup2" class="popup2">
+
         <div class="start_btn2"><button>Start Quiz</button></div>
 
-        
+
         <div class="quiz_box2">
-        
-        
-        <header>
-            <div class="timer2">
-                <div class="time_left_txt2">Time Left</div>
-                <div class="timer_sec2">15</div>
-            </div>
-            <div class="time_line2"></div>
-        
-            <div class="que_text2">
-                
-            </div>
-            <div class="option_list2">
-                
-            </div>
-        </header> 
 
-        
-        <footer>
-            <div class="total_que2">
-                
-            </div>
-            <button class="next_btn2">Next </button>
-        </footer>
-            
-        
+
+            <header>
+                <div class="timer2">
+                    <div class="time_left_txt2">Time Left</div>
+                    <div class="timer_sec2">15</div>
+                </div>
+                <div class="time_line2"></div>
+
+                <div class="que_text2">
+
+                </div>
+                <div class="option_list2">
+
+                </div>
+            </header>
+
+
+            <footer>
+                <div class="total_que2">
+
+                </div>
+                <button class="next_btn2">Next </button>
+            </footer>
+
+
         </div>
 
-        
+
         <div class="result_box2">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text2">You've completed the Quiz!</div>
-           
-        <div class="score_text2">
-            
-        </div>
-        <div class="buttons2">
-            
-            <button class="quit2">Resume </button>
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="complete_text2">You've completed the Quiz!</div>
 
+            <div class="score_text2">
+
+            </div>
+            <div class="buttons2">
+
+                <button class="quit2">Resume </button>
+
+            </div>
         </div>
-        </div>
-    
+
     </div>
-    
-    <div id="popup3" class="popup3" >
-         
+
+    <div id="popup3" class="popup3">
+
         <div class="start_btn3"><button>Start Quiz</button></div>
 
-        
+
         <div class="quiz_box3">
-        
-        
-        <header>
-            <div class="timer3">
-                <div class="time_left_txt3">Time Left</div>
-                <div class="timer_sec3">15</div>
-            </div>
-            <div class="time_line3"></div>
-        
-            <div class="que_text3">
-                
-            </div>
-            <div class="option_list3">
-                
-            </div>
-        </header> 
 
-        
-        <footer>
-            <div class="total_que3">
-                
-            </div>
-            <button class="next_btn3">Next </button>
-        </footer>
-            
-        
+
+            <header>
+                <div class="timer3">
+                    <div class="time_left_txt3">Time Left</div>
+                    <div class="timer_sec3">15</div>
+                </div>
+                <div class="time_line3"></div>
+
+                <div class="que_text3">
+
+                </div>
+                <div class="option_list3">
+
+                </div>
+            </header>
+
+
+            <footer>
+                <div class="total_que3">
+
+                </div>
+                <button class="next_btn3">Next </button>
+            </footer>
+
+
         </div>
 
-        
+
         <div class="result_box3">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text3">You've completed the Quiz!</div>
-           
-        <div class="score_text3">
-            
-        </div>
-        <div class="buttons3">
-            
-            <button class="quit3">Resume </button>
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="complete_text3">You've completed the Quiz!</div>
 
+            <div class="score_text3">
+
+            </div>
+            <div class="buttons3">
+
+                <button class="quit3">Resume </button>
+
+            </div>
         </div>
-        </div>
-    
+
     </div>
     <div id="popupglob">
-            <div class ="popupp">
-                <div class="icon">
-                    <i class="fa-solid fa-check">✔</i>
-                </div>
-                <div class="title">
-                    GREAT !
-                </div>
-                <div class="descritpion">
+        <div class="popupp">
+            <div class="icon">
+                <i class="fa-solid fa-check">✔</i>
+            </div>
+            <div class="title">
+                GREAT !
+            </div>
+            <div class="descritpion">
                 GOOD JOB! You Have Passed The Level
-                </div>
-                <div class="dismiss-btn">
-                    <button id="dismiss-popup-btn">Back</button>
-                </div>
             </div>
-            <div class="center">
-                <button id="open-popup-btn">
-                    Open popup
-                </button>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup-btn">Back</button>
             </div>
-  </div>
+        </div>
+        <div class="center">
+            <button id="open-popup-btn">
+                Open popup
+            </button>
+        </div>
+    </div>
 
-   <script src="end.js"></script>
-   <script src="HighScores.js"></script>
-   <script src="HighScores2.js"></script>
-   <script src="HighScores3.js"></script>
+    <script src="end.js"></script>
+    <script src="HighScores.js"></script>
+    <script src="HighScores2.js"></script>
+    <script src="HighScores3.js"></script>
 
-   <script src="quiz.js"></script>
-   <script src="quiz2.js"></script>
-   <script src="quiz3.js"></script>
-   <script src="popup.js"></script>
+    <script src="quiz.js"></script>
+    <script src="quiz2.js"></script>
+    <script src="quiz3.js"></script>
+    <script src="popup.js"></script>
 
 </body>
 
