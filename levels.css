@@ -21,10 +21,20 @@ body::before {
    left: 0px;
    opacity: 0.3;
 }
+nav{
+   display: flex;
+
+}
+h1{
+   text-align: center;
+   color: #9E832E;
+   font-weight: 600;
+}
 .img{
    margin-top: -300 px;
    margin-bottom: 400px;
    position:absolute ;
+   scale: 3;
 
 }
  .content {
